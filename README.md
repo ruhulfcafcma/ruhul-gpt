@@ -11,3 +11,13 @@ Included: responsive design, sticky navigation, animated impact counters, intera
 Before publishing: replace the portrait placeholder with the real professional photograph; replace LinkedIn URL; replace hello@ruhul.bd with preferred email; add a real downloadable PDF CV.
 
 Hosting: upload to GitHub and deploy with Cloudflare Pages.
+
+
+## Ask Ruhul AI
+The public employer/recruiter chatbot is available at `/ask.html` and calls the Pages Function at `/api/ask`.
+
+For Cloudflare Pages, add these as **encrypted secrets / variables** before deploying:
+- `OPENAI_API_KEY` — your OpenAI API key (secret)
+- `OPENAI_MODEL` — optional; defaults to `gpt-5.6-luna`
+
+Never place the OpenAI API key in client-side HTML/JavaScript or commit it to GitHub.
