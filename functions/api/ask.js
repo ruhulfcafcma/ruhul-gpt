@@ -53,10 +53,11 @@ Rules:
         "Authorization": `Bearer ${context.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
-        model: context.env.OPENAI_MODEL || "gpt-6-luna",
+        model: context.env.OPENAI_MODEL || "gpt-5.6-luna",
         instructions: profile,
         input: question,
-        max_output_tokens: 500
+        max_output_tokens: 500,
+        store: false
       })
     });
 
