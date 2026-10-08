@@ -72,3 +72,19 @@ header{background:#fffF;border-bottom:1px solid #dfe3e8}
 .credential-note .text-link{color:#fff;text-decoration:underline;text-underline-offset:4px}.credential-note .text-link:hover{color:#7fc5ef}
 
 .insights .section-head h2{color:#101215}.insights .section-head h2 em{color:#00338D}
+
+/* Ask Ruhul AI — right-side assistant drawer */
+body.ask-drawer-open{overflow:hidden}
+.ask-backdrop{position:fixed;inset:0;background:rgba(17,24,39,.28);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity .22s ease,visibility .22s ease;z-index:199}
+.ask-backdrop.is-open{opacity:1;visibility:visible}
+.ask-drawer{position:fixed;top:0;right:0;width:min(500px,94vw);height:100vh;background:#fff;box-shadow:-18px 0 55px rgba(0,0,0,.16);z-index:200;display:flex;flex-direction:column;transform:translateX(102%);transition:transform .28s cubic-bezier(.22,.61,.36,1);border-left:1px solid #dfe3e8}
+.ask-drawer.is-open{transform:translateX(0)}
+.ask-drawer-head{height:78px;flex:0 0 78px;padding:0 22px;border-bottom:1px solid #dfe3e8;display:flex;align-items:center;justify-content:space-between;background:#fff}
+.ask-drawer-title{display:flex;align-items:center;gap:12px}.ask-drawer-icon{width:34px;height:34px;background:#00338D;color:#fff;display:grid;place-items:center;font-weight:800;font-size:.78rem}.ask-drawer-title strong{font:700 1rem Arial,Helvetica,sans-serif;display:block}.ask-drawer-title small{display:block;color:#777;font-size:.63rem;margin-top:2px}.ask-drawer-status{font-size:.58rem;font-weight:800;letter-spacing:.05em;color:#b05a3c;white-space:nowrap}.ask-drawer-status.is-ok{color:#2f7d4a}.ask-drawer-status.is-bad{color:#b05a3c}
+.ask-drawer-close{width:34px;height:34px;border:0;background:transparent;color:#555;font-size:1.5rem;line-height:1;cursor:pointer;margin-left:14px}.ask-drawer-close:hover{background:#f3f5f7;color:#111827}
+.ask-drawer-intro{padding:18px 22px 10px;background:#fafbfc;border-bottom:1px solid #eef0f2}.ask-drawer-intro p{margin:0;color:#5f6368;font-size:.78rem;line-height:1.55}
+.ask-drawer-prompts{padding:14px 22px 8px;display:flex;gap:7px;overflow-x:auto;background:#fafbfc;border-bottom:1px solid #eef0f2}.ask-drawer-prompts button{flex:0 0 auto;border:1px solid #dfe3e8;background:#fff;color:#111827;padding:8px 11px;font-size:.65rem;font-weight:700;cursor:pointer}.ask-drawer-prompts button:hover{border-color:#00338D;color:#00338D}
+.ask-drawer-messages{flex:1;overflow:auto;padding:22px;background:#f8fafc}.ask-drawer-msg{max-width:88%;padding:13px 15px;margin:0 0 12px;font-size:.78rem;line-height:1.6;white-space:pre-wrap}.ask-drawer-msg.bot{background:#fff;border:1px solid #dfe3e8;color:#111827}.ask-drawer-msg.user{margin-left:auto;background:#00338D;color:#fff}.ask-drawer-msg.pending{opacity:.65}
+.ask-drawer-form{display:flex;min-height:62px;border-top:1px solid #dfe3e8;background:#fff}.ask-drawer-form input{flex:1;min-width:0;border:0;padding:17px 18px;font:500 .78rem Arial,Helvetica,sans-serif;outline:0;color:#111827}.ask-drawer-form input::placeholder{color:#8a8f94}.ask-drawer-form input:focus{background:#fafbfc}.ask-drawer-form button{width:82px;border:0;background:#00338D;color:#fff;font-weight:800;font-size:.78rem;cursor:pointer}.ask-drawer-form button:hover{background:#005EB8}
+.ask-drawer-foot{padding:10px 22px;border-top:1px solid #eef0f2;color:#8a8f94;font-size:.58rem;line-height:1.45;background:#fff}
+@media(max-width:600px){.ask-drawer{width:100vw}.ask-drawer-head{padding:0 16px}.ask-drawer-intro{padding-left:16px;padding-right:16px}.ask-drawer-prompts{padding-left:16px;padding-right:16px}.ask-drawer-messages{padding:16px}.ask-drawer-foot{padding-left:16px;padding-right:16px}.ask-drawer-form button{width:72px}}
