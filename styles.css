@@ -30,7 +30,7 @@ header{background:#fffF;border-bottom:1px solid #dfe3e8}
 .contact{background:#111827;border-top:12px solid #00338D}
 .contact .eyebrow{color:#7fc5ef}
 .btn.primary{background:#00338D}
-.btn.outline{border-color:#7fc5ef}
+ .btn.outline{border-color:#7fc5ef;color:#00338D}
 .ask-nav{color:#00338D!important;font-weight:800}
 .value-section{background:#f4f7fa!important}
 .value-grid{border-color:#dfe3e8}
