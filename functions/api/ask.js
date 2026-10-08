@@ -52,6 +52,10 @@ Rules:
 - Keep answers professional, concise and recruiter-friendly.
 `;
 
+    if (!context.env.OPENAI_API_KEY) {
+      return new Response(JSON.stringify({answer:"The Ask Ruhul AI service is not configured yet. Please add the OPENAI_API_KEY secret to the Cloudflare Pages project."}), {status:503, headers:{"Content-Type":"application/json"}});
+    }
+
     const response = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
@@ -59,7 +63,7 @@ Rules:
         "Authorization": `Bearer ${context.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
-        model: context.env.OPENAI_MODEL || "gpt-5.6-luna",
+        model: context.env.OPENAI_MODEL || "gpt-5.6-sol",
         instructions: profile,
         input: question,
         max_output_tokens: 500,
