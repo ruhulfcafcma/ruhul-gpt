@@ -1,8 +1,8 @@
-export async function onRequestPost(context) {
+export async function onRequestGet(context) {\n  return Response.json({\n    configured: Boolean(context.env.OPENAI_API_KEY),\n    model: context.env.OPENAI_MODEL || "gpt-6-luna"\n  });\n}\n\nexport async function onRequestPost(context) {
   try {
     const body = await context.request.json();
     const question = typeof body?.question === "string" ? body.question.trim() : "";
-    if (!question || question.length > 1200) {
+    if (!context.env.OPENAI_API_KEY) {\n      return new Response(JSON.stringify({answer:"The AI assistant is not connected to its OpenAI API key yet. Please configure OPENAI_API_KEY in Cloudflare Pages → Settings → Variables and Secrets, then redeploy."}), {status:503, headers:{"Content-Type":"application/json"}});\n    }\n    if (!question || question.length > 1200) {
       return new Response(JSON.stringify({answer:"Please enter a concise question."}), {status:400, headers:{"Content-Type":"application/json"}});
     }
 
