@@ -54,3 +54,12 @@ header{background:#fffF;border-bottom:1px solid #dfe3e8}
 .clients-wrap,.portfolio-wrap,.ask-wrap{background:#fff}
 .section-title{border-top:1px solid #dfe3e8;padding-top:35px;margin-top:100px}
 .mobility,.client-list,.takeaways{border-top:12px solid #f3f5f7}
+
+.resume-section{background:#fff!important;border-top:12px solid #f3f5f7}
+.resume-grid{display:grid;grid-template-columns:1fr 1fr;gap:7vw;align-items:start}
+.resume-copy{max-width:700px}
+.resume-copy p{color:#5f6368}
+.resume-note{padding:18px 20px;border-left:5px solid #00338D;background:#f5f7fa}
+.resume-copy small{display:block;margin-top:14px;color:#777;font-size:.72rem}
+.resume-copy code{background:#eef2f6;padding:2px 5px}
+@media(max-width:800px){.resume-grid{grid-template-columns:1fr}}
