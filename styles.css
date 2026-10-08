@@ -63,3 +63,8 @@ header{background:#fffF;border-bottom:1px solid #dfe3e8}
 .resume-copy small{display:block;margin-top:14px;color:#777;font-size:.72rem}
 .resume-copy code{background:#eef2f6;padding:2px 5px}
 @media(max-width:800px){.resume-grid{grid-template-columns:1fr}}
+
+/* Reliable portrait rendering across Cloudflare/browser deployments */
+.hero-art .portrait-card{width:320px;height:440px;background:#fff!important;display:flex!important;align-items:center!important;justify-content:center!important;overflow:hidden!important;position:relative;z-index:2}
+.hero-art .portrait-card img{display:block!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:center top!important;background:#fff!important}
+@media(max-width:700px){.hero-art .portrait-card{width:min(78vw,320px);height:min(108vw,440px)}}
