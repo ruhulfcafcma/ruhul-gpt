@@ -27,8 +27,8 @@ Current corporate scope:
 Financial strategy, financial control, pricing, budgeting, forecasting, monthly financial statements, free cash flow analysis, inventory, procurement coordination, Oracle EBS recipes/BOM and journal entries, fixed assets, OEE, dealer credit notes, GRN cancellations, tax/VAT/statutory compliance, IAS/IFRS and cross-functional business partnering.
 
 Career timeline:
-- PRAN-RFL Group — Assistant Finance Controller / Head of Accounts, Dec 2025–Present.
-- PRAN-RFL Group — Senior Manager – Accounts, Mar 2025–Dec 2025.
+- PRAN-RFL Group — Assistant Finance Controller / Head of Accounts, FP&A, Dec 2025–Present.
+- PRAN-RFL Group — Senior Manager / Head of Accounts, FP&A, Mar 2025–Dec 2025.
 - Mahamud Sabuj & Co. — Associate Director, Mar 2025.
 - Mahamud Sabuj & Co. — Manager – Assurance & Advisory Services, Nov 2022–Feb 2025.
 - Mahamud Sabuj & Co. — Articled Student – Audit Senior, Nov 2019–Nov 2022.
