@@ -70,3 +70,5 @@ header{background:#fffF;border-bottom:1px solid #dfe3e8}
 @media(max-width:700px){.hero-art .portrait-card{width:min(78vw,320px);height:min(108vw,440px)}}
 
 .credential-note .text-link{color:#fff;text-decoration:underline;text-underline-offset:4px}.credential-note .text-link:hover{color:#7fc5ef}
+
+.insights .section-head h2{color:#101215}.insights .section-head h2 em{color:#00338D}
