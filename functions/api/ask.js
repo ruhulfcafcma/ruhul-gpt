@@ -6,6 +6,11 @@ export async function onRequestGet(context) {\n  return Response.json({\n    con
       return new Response(JSON.stringify({answer:"Please enter a concise question."}), {status:400, headers:{"Content-Type":"application/json"}});
     }
 
+    console.log("Ask Ruhul request received", {
+      question_length: question.length,
+      configured: Boolean(context.env.OPENAI_API_KEY)
+    });
+
     const profile = `
 Md. Ruhul Amin, ACA, ACMA
 Finance Controller | FP&A & Business Partnering | Manufacturing Finance
@@ -79,8 +84,28 @@ Rules:
     });
 
     if (!response.ok) {
-      const detail = await response.text();
-      return new Response(JSON.stringify({answer:"The assistant is temporarily unavailable. Please contact Ruhul directly."}), {status:502, headers:{"Content-Type":"application/json"}});
+      const requestId = response.headers.get("x-request-id") || "";
+      let apiError = {};
+      try {
+        apiError = await response.json();
+      } catch (_) {}
+
+      console.error("OpenAI API error", {
+        status: response.status,
+        requestId,
+        errorType: apiError?.error?.type || null,
+        errorCode: apiError?.error?.code || null
+      });
+
+      return new Response(JSON.stringify({
+        answer: "The AI service returned an error. Please check Cloudflare Observability logs.",
+        code: "OPENAI_API_ERROR",
+        openai_status: response.status,
+        request_id: requestId || undefined
+      }), {
+        status: 502,
+        headers: {"Content-Type":"application/json"}
+      });
     }
 
     const data = await response.json();
@@ -88,6 +113,17 @@ Rules:
       headers: {"Content-Type":"application/json"}
     });
   } catch (error) {
-    return new Response(JSON.stringify({answer:"The assistant is temporarily unavailable. Please try again later."}), {status:500, headers:{"Content-Type":"application/json"}});
+    console.error("Ask Ruhul Function error", {
+      name: error?.name || "Error",
+      message: error?.message || "Unknown error"
+    });
+
+    return new Response(JSON.stringify({
+      answer: "The AI assistant encountered a server error. Please check Cloudflare Observability logs.",
+      code: "FUNCTION_ERROR"
+    }), {
+      status: 500,
+      headers: {"Content-Type":"application/json"}
+    });
   }
 }
