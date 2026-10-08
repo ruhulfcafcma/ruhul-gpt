@@ -88,3 +88,14 @@ body.ask-drawer-open{overflow:hidden}
 .ask-drawer-form{display:flex;min-height:62px;border-top:1px solid #dfe3e8;background:#fff}.ask-drawer-form input{flex:1;min-width:0;border:0;padding:17px 18px;font:500 .78rem Arial,Helvetica,sans-serif;outline:0;color:#111827}.ask-drawer-form input::placeholder{color:#8a8f94}.ask-drawer-form input:focus{background:#fafbfc}.ask-drawer-form button{width:82px;border:0;background:#00338D;color:#fff;font-weight:800;font-size:.78rem;cursor:pointer}.ask-drawer-form button:hover{background:#005EB8}
 .ask-drawer-foot{padding:10px 22px;border-top:1px solid #eef0f2;color:#8a8f94;font-size:.58rem;line-height:1.45;background:#fff}
 @media(max-width:600px){.ask-drawer{width:100vw}.ask-drawer-head{padding:0 16px}.ask-drawer-intro{padding-left:16px;padding-right:16px}.ask-drawer-prompts{padding-left:16px;padding-right:16px}.ask-drawer-messages{padding:16px}.ask-drawer-foot{padding-left:16px;padding-right:16px}.ask-drawer-form button{width:72px}}
+
+/* Final navigation + hero CTA alignment */
+.actions .btn{min-width:156px;min-height:52px;justify-content:center;text-align:center;white-space:nowrap;line-height:1.15}
+.nav-btn{min-width:118px;min-height:40px;display:inline-flex;align-items:center;justify-content:center;text-align:center;white-space:nowrap;line-height:1}
+.ask-trigger{min-width:128px}
+.hero-art .f2{width:205px;right:-10px;padding:16px 18px}
+.hero-art .f2 b{line-height:1.25;white-space:normal}
+@media(max-width:600px){
+.actions{gap:8px}.actions .btn{min-width:0;flex:1 1 0;padding:13px 10px;font-size:.78rem}
+.hero-art .f2{width:185px;right:-4px}
+}
