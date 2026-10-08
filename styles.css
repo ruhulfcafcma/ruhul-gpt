@@ -45,3 +45,12 @@ header{background:#fffF;border-bottom:1px solid #dfe3e8}
 .ask-prompts a:hover{border-color:#00338D;color:#00338D}
 @media(max-width:900px){.ask-home-grid{grid-template-columns:1fr}.ask-prompts{grid-template-columns:1fr}.hero-art{border-left:0;border-top:8px solid #00338D}}
 @media(max-width:600px){.section{padding:95px 6vw}.hero{padding-top:65px}.ask-prompts{grid-template-columns:1fr}}
+
+/* Shared page-level treatment */
+.client-hero,.portfolio-hero,.ask-hero{background:#00338D!important;color:#fff;border-bottom:12px solid #0091DA}
+.client-hero .eyebrow,.portfolio-hero .eyebrow,.ask-hero .eyebrow{color:#d7efff}
+.client-hero h1,.portfolio-hero h1,.ask-hero h1{font-family:Arial,Helvetica,sans-serif!important;font-weight:700!important}
+.client-hero h1 em,.portfolio-hero h1 em,.ask-hero h1 em{color:#d7efff}
+.clients-wrap,.portfolio-wrap,.ask-wrap{background:#fff}
+.section-title{border-top:1px solid #dfe3e8;padding-top:35px;margin-top:100px}
+.mobility,.client-list,.takeaways{border-top:12px solid #f3f5f7}
