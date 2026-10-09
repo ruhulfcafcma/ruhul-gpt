@@ -99,3 +99,61 @@ body.ask-drawer-open{overflow:hidden}
 .actions{gap:8px}.actions .btn{min-width:0;flex:1 1 0;padding:13px 10px;font-size:.78rem}
 .hero-art .f2{width:185px;right:-4px}
 }
+
+/* Responsive layout and navigation correction — Oct 2026 */
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{min-width:0}
+main,section,header,footer{max-width:100%}
+img,svg,video,canvas{max-width:100%}
+header{gap:22px;padding-left:clamp(18px,4vw,64px);padding-right:clamp(18px,4vw,64px)}
+header nav{flex:1;min-width:0;justify-content:flex-end;gap:clamp(8px,1.15vw,18px);font-size:clamp(.72rem,.78vw,.84rem)}
+header nav a{white-space:nowrap}
+header .logo{flex:0 0 auto}
+.hero,.section,.contact,.client-hero,.clients-wrap,.client-list,.takeaways,.mobility,.privacy,.client-cta,.portfolio-hero,.portfolio-wrap,.portfolio-cta{width:100%;max-width:100%;min-width:0}
+.hero>*{min-width:0}
+.hero-art{min-width:0}
+.hero-art .f1{left:0;max-width:calc(100% - 8px)}
+.hero-art .f2{max-width:calc(100% - 8px)}
+.portfolio-hero,.client-hero{overflow:hidden}
+.portfolio-cards,.scope-grid,.engagement-grid,.expert-grid,.story-cards,.leadership-grid,.credential-grid,.insight-grid,.impact-grid{min-width:0}
+@media(max-width:1200px){
+ header{height:72px}
+ header nav{gap:9px;font-size:.69rem}
+ header .nav-btn{min-width:0;padding:8px 10px;font-size:.68rem}
+ header .ask-trigger{min-width:0}
+}
+@media(max-width:900px){
+ header{height:68px;padding-left:5vw;padding-right:5vw}
+ header nav{display:none}
+ header nav.mobile-open{display:flex!important;flex-direction:column;align-items:stretch;gap:0;position:absolute;top:68px;left:0;right:0;width:100%;padding:12px 5vw 20px;background:#fff;border-bottom:1px solid #dfe3e8;box-shadow:0 14px 28px #11182718;max-height:calc(100vh - 68px);overflow-y:auto;z-index:60}
+ header nav.mobile-open a{display:flex;align-items:center;min-height:42px;padding:10px 4px;white-space:normal;font-size:.9rem;border-bottom:1px solid #eef0f2;opacity:1}
+ header nav.mobile-open .nav-btn{justify-content:center;margin-top:8px;padding:12px;border:1px solid #00338D;border-radius:999px}
+ .hamb{display:block;flex:0 0 auto;cursor:pointer;color:#111827;padding:8px}
+ .hero{min-height:auto;grid-template-columns:minmax(0,1fr);padding-top:58px;padding-bottom:65px;gap:28px}
+ .hero-copy{min-width:0}
+ .hero-art{width:100%;min-height:440px}
+ .section{padding:85px 6vw}
+ .portfolio-wrap,.clients-wrap{padding:75px 6vw}
+ .portfolio-hero,.client-hero{padding:75px 6vw}
+ .portfolio-hero h1,.client-hero h1{overflow-wrap:anywhere}
+}
+@media(max-width:600px){
+ .hero h1{font-size:clamp(3.2rem,13vw,4.4rem)}
+ .hero-text{font-size:.98rem}
+ .actions{flex-wrap:wrap}
+ .actions .btn{flex:1 1 42%;min-width:0}
+ .proof{gap:0;justify-content:space-between}
+ .proof div{padding:0 10px;min-width:0}
+ .hero-art{min-height:390px;padding:12px}
+ .hero-art .portrait-card{width:min(66vw,280px);height:min(91vw,370px)}
+ .hero-art .f1{left:0;bottom:18px;max-width:75%}
+ .hero-art .f2{right:0;top:18px;width:min(45vw,185px);max-width:45%}
+ .hero-art .f2 b{font-size:.82rem}
+ .portfolio-meta{gap:18px}
+ .portfolio-meta>div{min-width:40%}
+ .portfolio-nav,.portfolio-cards,.scope-grid,.engagement-grid,.signals,.takeaways-grid,.leadership-grid,.credential-grid,.insight-grid,.impact-grid{grid-template-columns:minmax(0,1fr)}
+ .portfolio-section-head{display:block}
+ .portfolio-section-head p{text-align:left}
+ .portfolio-cta{padding:60px 6vw}
+ footer{gap:12px;overflow-wrap:anywhere}
+}
