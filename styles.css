@@ -157,3 +157,17 @@ header .logo{flex:0 0 auto}
  .portfolio-cta{padding:60px 6vw}
  footer{gap:12px;overflow-wrap:anywhere}
 }
+
+
+/* Credential logos and Chartered Accountants Worldwide affiliation */
+.credential-logo-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch}
+.credential-logo{height:105px;display:flex;align-items:center;justify-content:center;padding:8px 0 20px;margin-bottom:12px;border-bottom:1px solid #eef0f2}
+.credential-logo img{display:block;max-width:100%;width:auto;height:auto;max-height:76px;object-fit:contain}
+.credential-logo-grid article{min-width:0}
+.caw-membership{display:grid;grid-template-columns:minmax(180px,.7fr) minmax(0,1.7fr);gap:36px;align-items:center;margin-top:24px;padding:30px;border:1px solid #dfe3e8;background:#f8fafc}
+.caw-logo{display:flex;justify-content:center;align-items:center;min-height:100px}
+.caw-logo img{display:block;width:min(100%,310px);max-height:110px;object-fit:contain}
+.caw-copy h3{font:700 1.5rem Arial,Helvetica,sans-serif;letter-spacing:-.03em;margin:8px 0}
+.caw-copy p{color:#5f6368;margin:8px 0 12px;max-width:760px}
+.caw-copy>a{color:#00338D;font-weight:700;font-size:.8rem;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.credential-logo-grid{grid-template-columns:1fr}.credential-logo-grid article{display:grid;grid-template-columns:100px minmax(0,1fr);column-gap:18px;align-items:center;padding:20px}.credential-logo{grid-row:1/4;height:auto;min-height:80px;padding:0;margin:0;border:0}.credential-logo img{max-height:76px;max-width:95px}.credential-logo-grid h3{margin:0 0 5px}.credential-logo-grid p{margin:0 0 5px}.credential-logo-grid b{align-self:start}.caw-membership{grid-template-columns:1fr;gap:12px;padding:22px}.caw-logo img{max-width:260px}.caw-copy h3{font-size:1.25rem}}
