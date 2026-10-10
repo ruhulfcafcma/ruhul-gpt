@@ -219,3 +219,109 @@ header .logo{flex:0 0 auto}
 .contact .contact-meta{color:#aab5c4!important}
 @media(max-width:900px){.insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:600px){.insight-grid{grid-template-columns:1fr!important}.insight-grid article{min-height:0!important;padding:24px!important}.contact .contact-actions{gap:10px}.contact .contact-social{padding:12px 15px}}
+
+
+/* Make the Contact section a clear, high-impact closing call to action. */
+.contact{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  padding:clamp(90px,11vw,150px) 7vw!important;
+  background:radial-gradient(ellipse at 50% 0%,#1c3150 0%,#111827 48%,#0b1220 100%)!important;
+  border-top:10px solid #1688e8!important;
+}
+.contact:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  width:min(760px,90vw);
+  height:1px;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,#7fc5ef,transparent);
+}
+.contact .eyebrow{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 28px!important;
+  padding:9px 16px;
+  border:1px solid #7fc5ef;
+  border-radius:999px;
+  background:#123a60;
+  color:#e5f5ff!important;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.22em;
+}
+.contact h2{
+  max-width:1050px;
+  margin:0 auto!important;
+  color:#fff!important;
+  font-family:var(--head,Arial,sans-serif)!important;
+  font-size:clamp(2.8rem,6.2vw,5.6rem)!important;
+  font-weight:850!important;
+  line-height:1.04!important;
+  letter-spacing:-.055em!important;
+  text-wrap:balance;
+}
+.contact h2 em{
+  color:#7fc5ef!important;
+  font-weight:850!important;
+  font-style:normal;
+  text-decoration:underline;
+  text-decoration-color:#1688e8;
+  text-decoration-thickness:3px;
+  text-underline-offset:9px;
+}
+.contact p{
+  max-width:660px!important;
+  margin:30px auto 0!important;
+  color:#d0d8e4!important;
+  font-size:clamp(1rem,1.4vw,1.12rem)!important;
+  line-height:1.75!important;
+}
+.contact .contact-actions{
+  gap:14px!important;
+  margin:38px 0 0!important;
+}
+.contact .contact-social{
+  min-width:150px;
+  min-height:54px!important;
+  border-radius:999px!important;
+  font-size:.92rem!important;
+  font-weight:800!important;
+  box-shadow:0 8px 24px #0002;
+  transition:transform .18s ease,background .18s ease,border-color .18s ease;
+}
+.contact .contact-social:hover{transform:translateY(-2px)}
+.contact .email-social{
+  background:#fff!important;
+  color:#00338D!important;
+  border:2px solid #fff!important;
+}
+.contact .email-social:hover{background:#e5f4ff!important}
+.contact .linkedin-social{
+  background:#0a66c2!important;
+  color:#fff!important;
+  border:2px solid #0a66c2!important;
+}
+.contact .linkedin-social:hover{background:#004182!important;border-color:#7fc5ef!important}
+.contact .contact-meta{
+  margin-top:36px;
+  color:#aebdd0!important;
+  font-size:.78rem!important;
+  letter-spacing:.025em;
+}
+@media(max-width:600px){
+  .contact{padding:82px 6vw 76px!important;border-top-width:7px!important}
+  .contact .eyebrow{margin-bottom:24px!important}
+  .contact h2{font-size:clamp(2.35rem,10vw,3.5rem)!important;line-height:1.08!important}
+  .contact h2 em{text-underline-offset:5px;text-decoration-thickness:2px}
+  .contact p{margin-top:24px!important;font-size:.96rem!important}
+  .contact .contact-actions{margin-top:30px!important;gap:10px!important}
+  .contact .contact-social{min-width:0;min-height:50px!important;padding:12px 15px!important}
+  .contact .contact-meta{margin-top:28px}
+}
+@media(prefers-reduced-motion:reduce){.contact .contact-social{transition:none}.contact .contact-social:hover{transform:none}}
