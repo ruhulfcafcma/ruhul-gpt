@@ -176,3 +176,17 @@ header .logo{flex:0 0 auto}
 .credential-logo svg{display:block;width:min(100%,320px);height:auto;max-height:76px;overflow:visible}
 .credential-logo-cou svg{max-width:180px;max-height:92px}
 @media(max-width:700px){.credential-logo svg{max-width:100%;max-height:76px}.credential-logo-cou svg{max-width:100%;max-height:86px}}
+
+
+/* Improve contrast and visual balance in dark sections, especially on mobile. */
+.dark{border-top-color:#dfe3e8!important}
+.dark .section-head h2 em,
+.dark h2 em{color:#7fc5ef!important}
+.dark .timeline h4{color:#9bdcff!important}
+.dark .timeline .text-link{color:#fff!important;text-decoration:underline;text-decoration-color:#7fc5ef;text-underline-offset:4px}
+.dark .timeline .text-link:hover{color:#7fc5ef!important}
+.dark .timeline .year{color:#b4bdca}
+.dark .timeline p,
+.dark .section-head p{color:#c3cad4}
+.dark .timeline{border-top-color:#3a4658}
+.dark .timeline article{border-bottom-color:#3a4658}
