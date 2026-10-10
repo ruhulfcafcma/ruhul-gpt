@@ -480,3 +480,46 @@ header .logo{flex:0 0 auto}
     margin-bottom: 20px;
   }
 }
+
+
+/* Subtle rotating convocation photos behind the homepage portrait. */
+.hero-art{isolation:isolate}
+.hero-art .orb{z-index:0}
+.hero-art .convocation-slideshow{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  overflow:hidden;
+  border-radius:10px;
+  pointer-events:none;
+  background:#eaf0f7;
+}
+.hero-art .convocation-slideshow img{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:0;
+  filter:saturate(.78) contrast(.9);
+  transition:opacity 1.4s ease-in-out;
+}
+.hero-art .convocation-slideshow img.is-active{opacity:.42}
+.hero-art .convocation-wash{
+  position:absolute;
+  inset:0;
+  display:block;
+  background:linear-gradient(115deg,rgba(245,247,250,.64),rgba(245,247,250,.28) 55%,rgba(245,247,250,.48));
+}
+.hero-art .gridlines{z-index:1;pointer-events:none}
+.hero-art .portrait-card{z-index:2}
+.hero-art .floating{z-index:4}
+@media(max-width:600px){
+  .hero-art .convocation-slideshow img.is-active{opacity:.32}
+  .hero-art .convocation-wash{background:linear-gradient(115deg,rgba(245,247,250,.7),rgba(245,247,250,.4) 55%,rgba(245,247,250,.55))}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-art .convocation-slideshow img{transition:none}
+}
