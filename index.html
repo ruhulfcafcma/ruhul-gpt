@@ -52,12 +52,29 @@
 <script>(function(){const box=document.querySelector(".convocation-slideshow");if(!box)return;const slides=[...box.querySelectorAll("img")];if(slides.length<2)return;const reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(reduce)return;let active=0;window.setInterval(()=>{slides[active].classList.remove("is-active");active=(active+1)%slides.length;slides[active].classList.add("is-active")},5600)})();</script><script data-convocation-rotator>
 (() => {
   const slides = Array.from(document.querySelectorAll('.convocation-slideshow img'));
-  if (slides.length < 2) return;
-  let active = Math.max(0, slides.findIndex(img => img.classList.contains('is-active')));
-  window.setInterval(() => {
-    slides[active].classList.remove('is-active');
-    active = (active + 1) % slides.length;
-    slides[active].classList.add('is-active');
-  }, 5000);
+  if (slides.length > 1) {
+    let active = Math.max(0, slides.findIndex(img => img.classList.contains('is-active')));
+    window.setInterval(() => {
+      slides[active].classList.remove('is-active');
+      active = (active + 1) % slides.length;
+      slides[active].classList.add('is-active');
+    }, 5000);
+  }
+  const menuButton = document.querySelector('.hamb');
+  const nav = document.querySelector('header nav');
+  if (menuButton && nav) {
+    menuButton.setAttribute('aria-label', 'Toggle navigation');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.addEventListener('click', () => {
+      const opened = nav.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(opened));
+      menuButton.textContent = opened ? '×' : '☰';
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('is-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.textContent = '☰';
+    }));
+  }
 })();
 </script><script src="ask-drawer.js"></script></body></html>
