@@ -445,3 +445,38 @@ header .logo{flex:0 0 auto}
     margin-bottom: 18px;
   }
 }
+
+
+/* Strong, unmistakable emphasis for Leadership page section names */
+#leadership-home > section.section > .eyebrow {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1.35;
+  letter-spacing: .12em;
+  font-weight: 800;
+  color: #00338D;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #0091DA;
+  margin-bottom: 24px;
+}
+#leadership-home #volunteering > .eyebrow,
+#leadership-home #awards > .eyebrow {
+  color: #00338D;
+}
+@media (min-width: 901px) {
+  header nav a[href="leadership.html#organizations"],
+  header nav a[href="leadership.html#volunteering"],
+  header nav a[href="leadership.html#awards"] {
+    font-size: .82rem;
+    font-weight: 800;
+    color: #00338D;
+    opacity: 1;
+  }
+}
+@media (max-width: 900px) {
+  #leadership-home > section.section > .eyebrow {
+    font-size: .98rem;
+    letter-spacing: .1em;
+    margin-bottom: 20px;
+  }
+}
