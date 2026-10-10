@@ -171,3 +171,8 @@ header .logo{flex:0 0 auto}
 .caw-copy p{color:#5f6368;margin:8px 0 12px;max-width:760px}
 .caw-copy>a{color:#00338D;font-weight:700;font-size:.8rem;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:700px){.credential-logo-grid{grid-template-columns:1fr}.credential-logo-grid article{display:grid;grid-template-columns:100px minmax(0,1fr);column-gap:18px;align-items:center;padding:20px}.credential-logo{grid-row:1/4;height:auto;min-height:80px;padding:0;margin:0;border:0}.credential-logo img{max-height:76px;max-width:95px}.credential-logo-grid h3{margin:0 0 5px}.credential-logo-grid p{margin:0 0 5px}.credential-logo-grid b{align-self:start}.caw-membership{grid-template-columns:1fr;gap:12px;padding:22px}.caw-logo img{max-width:260px}.caw-copy h3{font-size:1.25rem}}
+
+/* Embedded credential marks: reliable on all devices, no third-party image requests */
+.credential-logo svg{display:block;width:min(100%,320px);height:auto;max-height:76px;overflow:visible}
+.credential-logo-cou svg{max-width:180px;max-height:92px}
+@media(max-width:700px){.credential-logo svg{max-width:100%;max-height:76px}.credential-logo-cou svg{max-width:100%;max-height:86px}}
