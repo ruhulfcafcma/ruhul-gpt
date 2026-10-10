@@ -421,3 +421,27 @@ header .logo{flex:0 0 auto}
   #leadership-home .leadership-grid article { transition: none; }
   #leadership-home .leadership-grid article:hover { transform: none; }
 }
+
+
+/* Make the Organizations, Volunteering and Awards section labels easier to see */
+#leadership-home > .section > .eyebrow {
+  font-size: .88rem;
+  line-height: 1.4;
+  letter-spacing: .16em;
+  font-weight: 800;
+  color: #003b7a;
+  margin-bottom: 22px;
+}
+#leadership-home #volunteering > .eyebrow {
+  color: #003b7a;
+}
+#leadership-home #awards > .eyebrow {
+  color: #003b7a;
+}
+@media (max-width: 620px) {
+  #leadership-home > .section > .eyebrow {
+    font-size: .82rem;
+    letter-spacing: .13em;
+    margin-bottom: 18px;
+  }
+}
