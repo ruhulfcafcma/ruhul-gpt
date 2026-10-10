@@ -544,3 +544,47 @@ header .logo{flex:0 0 auto}
   header nav.is-open a{display:block;padding:10px 0;font-size:14px}
   header nav.is-open .nav-btn{padding:10px 14px;text-align:center}
 }
+
+
+/* Convocation background framing: give landscape photos enough vertical space on phones. */
+.hero-art .convocation-slideshow img {
+  object-fit: cover;
+  object-position: center 42%;
+  filter: none;
+  image-rendering: auto;
+}
+@media (max-width: 900px), (hover: none) and (pointer: coarse) {
+  .hero-art {
+    height: 480px !important;
+    min-height: 480px !important;
+    aspect-ratio: auto;
+    overflow: hidden;
+    padding: 14px;
+  }
+  .hero-art .convocation-slideshow {
+    inset: 0;
+    border-radius: 8px;
+  }
+  .hero-art .convocation-slideshow img {
+    object-position: center 42%;
+  }
+  .hero-art .portrait-card {
+    max-width: 58%;
+    max-height: 72%;
+  }
+  .hero-art .floating.f1 {
+    left: 0;
+    bottom: 26px;
+    max-width: 62%;
+  }
+}
+@media (max-width: 600px), (hover: none) and (pointer: coarse) {
+  .hero-art {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+  .hero-art .portrait-card {
+    width: min(220px, 55vw);
+    height: 310px;
+  }
+}
