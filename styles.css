@@ -532,3 +532,15 @@ header .logo{flex:0 0 auto}
 @media(prefers-reduced-motion:reduce){
   .hero-art .convocation-slideshow img{transition:none}
 }
+
+@media(max-width:900px), (hover:none) and (pointer:coarse) {
+  header{position:sticky}
+  header nav.is-open{
+    display:flex;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:0;
+    padding:10px 6vw 18px;background:#fff;
+    border-bottom:1px solid #dfe3e8;box-shadow:0 14px 24px #11182718;
+  }
+  header nav.is-open a{display:block;padding:10px 0;font-size:14px}
+  header nav.is-open .nav-btn{padding:10px 14px;text-align:center}
+}
