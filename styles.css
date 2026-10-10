@@ -190,3 +190,32 @@ header .logo{flex:0 0 auto}
 .dark .section-head p{color:#c3cad4}
 .dark .timeline{border-top-color:#3a4658}
 .dark .timeline article{border-bottom-color:#3a4658}
+
+
+/* Insights, resume and contact: consistent navy, white and accessible blue. */
+.insights{background:#f4f7fb!important;color:#111827!important}
+.insights .section-head h2{color:#111827!important}
+.insights .section-head h2 em{color:#005eb8!important}
+.insights .section-head p{color:#5f6368!important}
+.insight-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:16px!important;background:transparent!important;border:0!important}
+.insight-grid article{min-width:0;background:#fff!important;color:#111827!important;border:1px solid #dfe3e8;padding:28px!important;min-height:260px!important}
+.insight-grid h3{color:#111827!important}
+.insight-grid p{color:#5f6368!important}
+.insight-grid a{display:inline-block;margin:7px 14px 0 0;color:#00338D!important;text-decoration:underline;text-underline-offset:4px}
+.insight-grid a:hover{color:#005eb8!important}
+.resume-section{background:#f8fafc!important}
+.resume-section h2 em{color:#005eb8!important}
+.resume-copy .btn.primary{background:#00338D!important;color:#fff!important}
+.contact{background:#111827!important;border-top:8px solid #00338D!important}
+.contact h2 em{color:#7fc5ef!important}
+.contact p{color:#c3cad4!important}
+.contact .contact-actions{align-items:center;flex-wrap:wrap}
+.contact .contact-social{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:13px 18px;font-size:.84rem}
+.contact .social-icon{width:19px;height:19px;flex:0 0 19px;display:block}
+.contact .email-social{background:#fff!important;color:#00338D!important;border:1px solid #fff!important}
+.contact .email-social:hover{background:#eaf4ff!important}
+.contact .linkedin-social{background:transparent!important;color:#fff!important;border:1px solid #7fc5ef!important}
+.contact .linkedin-social:hover{background:#1b2b43!important;border-color:#fff!important}
+.contact .contact-meta{color:#aab5c4!important}
+@media(max-width:900px){.insight-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:600px){.insight-grid{grid-template-columns:1fr!important}.insight-grid article{min-height:0!important;padding:24px!important}.contact .contact-actions{gap:10px}.contact .contact-social{padding:12px 15px}}
